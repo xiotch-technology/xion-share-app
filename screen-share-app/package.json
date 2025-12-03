@@ -1,0 +1,32 @@
+{
+  "name": "screen-share-app",
+  "version": "1.0.0",
+  "description": "Professional web-based screen sharing application",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "start": "cd server && npm start",
+    "lint": "cd client && npm run lint && cd ../server && npm run lint",
+    "test": "cd client && npm run test && cd ../server && npm run test"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": [
+    "screen-sharing",
+    "webrtc",
+    "socket.io",
+    "react",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
